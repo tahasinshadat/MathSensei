@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Videos - MathSensei</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="script.js"></script>
+
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="static/scripts/responses.js"></script>
+    <script defer src="static/scripts/chat.js"></script>
+
+    <link rel="stylesheet" href="static/css/chat.css">
+         <link rel="stylesheet" href="static/css/home.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="navbar-menu">
+            <ul class="menu-items">
+                <li><a href="welcome.html">Home</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="index.html">Quiz</a></li>
+            </ul>
+        </div>
+        <div class="theme-toggle">
+          <button id="theme-toggle-btn">Dark Mode</button>
+        </div>
+    </nav>
+    <h1>Videos I found Useful!</h1>
+    <h1 id="saved">(They saved me right before tests)</h1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JrWJnwCMlP0" title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eYSASx8_nyg" title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Tj-V6KnwM5w" title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/97pe-QlSGqA" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/P182Abv3fOk" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PLrgwD9TleU" title="YouTube video player" frameborder="0"
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+         <!-- CHAT BAR BLOCK -->
+         <div class="chat-bar-collapsible">
+             <button id="chat-button" type="button" class="collapsible"> MathSensei AI (Under Construction)
+                 <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+             </button>
+     
+             <div class="content">
+                 <div class="full-chat-block">
+                     <!-- Message Container -->
+                     <div class="outer-container">
+                         <div class="chat-container">
+                             <!-- Messages -->
+                             <div id="chatbox">
+                                 <h5 id="chat-timestamp"></h5>
+                                 <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                             </div>
+     
+                             <!-- User input box -->
+                             <div class="chat-bar-input-block">
+                                 <div id="userInput">
+                                     <input id="textInput" class="input-box" type="text" name="msg"
+                                         placeholder="Tap 'Enter' to send a message">
+                                     <p></p>
+                                 </div>
+     
+                                 <div class="chat-bar-icons">
+                                     <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                         onclick="heartButton()"></i>
+                                     <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                         onclick="sendButton()"></i>
+                                 </div>
+                             </div>
+     
+                             <div id="chat-bar-bottom">
+                                 <p></p>
+                             </div>
+     
+                         </div>
+                     </div>
+     
+                 </div>
+             </div>
+     
+         </div>
+</body>
+</html>

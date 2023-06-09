@@ -1,0 +1,261 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    /* overflow: hidden; */
+}
+
+h1 {
+    color: #333;
+}
+
+#quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#theme-toggle-btn {
+    margin-right: 20px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(39, 0, 90);
+    border-radius: 5px;
+}
+
+#theme-toggle-btn:hover {
+    box-shadow: 0px 0px 5px 4px blue;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black !important;
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.answer {
+    cursor: pointer;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.answer img {
+    max-width: 100%;
+    height: 300px; /* Adjust the desired height for the images */
+    width: 450px;
+    object-fit: cover; /* Ensures the images maintain aspect ratio and cover the available space */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.answer.selected img {
+    border: 2px solid #333;
+}
+
+.next-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: black !important;
+}
+
+.result-description {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: black !important;
+}
+
+
+.navbar {
+    background-color: #333;
+    padding: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.menu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-items li {
+    margin-right: 20px;
+}
+
+.menu-items li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-items li a:hover {
+    color: #eaeaea;
+}
+
+/* Responsive styles */
+
+.navbar-menu {
+    margin-right: 20px;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.menu-items.collapsed {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        padding-left: 10px;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        align-items: flex-end;
+        display: none;
+    }
+
+    .menu-items.collapsed {
+        display: block;
+    }
+
+    .menu-items.collapsed li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu-items.collapsed li:last-child {
+        margin-bottom: 0;
+    }
+
+    .menu-items.collapsed a {
+        display: block;
+        padding: 5px;
+    }
+
+    .navbar-menu.collapsed .toggle-icon {
+        background-color: #fff;
+    }
+}
+
+/* Dark mode styles */
+
+.dark-mode h1 {
+    color: #fff;
+}
+
+body {
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+body {
+    transition: background-color 0.3s ease;
+    background-color: #f5f5f5;
+}
+
+.dark-mode body {
+    background-color: #222;
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+    background-color: #333;
+}
+
+.dark-mode .navbar {
+    background-color: #000000;
+}
+
+iframe {
+    padding: 10px;
+    margin: 5px;
+}
+
+#saved {
+    margin-top: -15px;;
+    font-size: 20px;
+}
+
+#welcome {
+    background: rgb(0,255,252);
+    background: radial-gradient(circle, rgba(0,255,252,1) 0%, rgba(0,22,182,1) 100%);
+}
+
+#welcome h1{
+    color: rgb(249, 255, 231);
+}
+
+.image {
+    position: relative;
+    animation-name: slideFromBottom;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+@keyframes slideFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
